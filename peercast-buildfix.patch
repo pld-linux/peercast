@@ -1,0 +1,10 @@
+--- peercast-0.1212/ui/linux/main.cpp.orig	2005-06-15 13:23:11.000000000 +0200
++++ peercast-0.1212/ui/linux/main.cpp	2005-06-15 13:23:16.000000000 +0200
+@@ -22,7 +22,6 @@
+ #include <stdarg.h>
+ #include <stdio.h>
+ #include "channel.h"
+-#include "prefix.h"
+ #include "servent.h"
+ #include "servmgr.h"
+ #include "unix/usys.h"
