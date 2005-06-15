@@ -8,7 +8,7 @@ License:	GPL
 Group:		Applications
 # svn://peercast.org/peercast/tags/v%{version}
 Source0:	%{name}-%{version}.tar.bz2
-# Source0-md5:	64440769f092fb13ecc79d2097785327
+# Source0-md5:	7a1321444eb25ec7b26cddf852d763b5
 Patch0:		%{name}-buildfix.patch
 Patch1:		%{name}-ini-location.patch
 URL:		http://www.peercast.org/
