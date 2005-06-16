@@ -5,7 +5,7 @@ Version:	0.1212
 Release:	1
 Epoch:		0
 License:	GPL
-Group:		Applications
+Group:		Applications/Multimedia
 # svn://peercast.org/peercast/tags/v%{version}
 Source0:	%{name}-%{version}.tar.bz2
 # Source0-md5:	7a1321444eb25ec7b26cddf852d763b5
