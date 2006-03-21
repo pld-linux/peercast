@@ -1,16 +1,17 @@
 Summary:	PeerCast: a peer-to-peer streaming client/server
 Summary(pl):	PeerCast: klient/serwer strumieni w systemie peer-to-peer
 Name:		peercast
-Version:	0.1212
+Version:	0.1217
 Release:	1
-Epoch:		0
 License:	GPL
 Group:		Applications/Multimedia
-# svn://peercast.org/peercast/tags/v%{version}
-Source0:	%{name}-%{version}.tar.bz2
-# Source0-md5:	7a1321444eb25ec7b26cddf852d763b5
+Source0:	http://www.peercast.org/src/%{name}-%{version}-src.tgz
+# Source0-md5:	d4881d8f1454311ccca8df20c0c1c305
 Patch0:		%{name}-buildfix.patch
 Patch1:		%{name}-ini-location.patch
+Patch2:		%{name}-amd64.patch
+Patch3:		%{name}-makefile.patch
+Patch4:		%{name}-paths.patch
 URL:		http://www.peercast.org/
 BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -32,10 +33,14 @@ Oznacza to mo¿liwo¶æ s³uchania i ogl±dania stacji zwykle niedostêpnych
 na stronach komercyjnych.
 
 %prep
-%setup -q
-%patch0 -p1
+%setup -qc
+find '(' -name '*.cpp' -o -name '*.h' ')' -print0 | xargs -0 sed -i -e 's,\r$,,'
+
+#%patch0 -p1
 %patch1 -p1
-sed -i 's,\./,%{_peercastdir}/,' core/common/peercast.h
+%patch2 -p1
+%patch3 -p1
+%patch4 -p1
 
 %build
 %{__make} -C ui/linux \
