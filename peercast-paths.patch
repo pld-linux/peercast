@@ -1,0 +1,11 @@
+--- peercast-0.1217/core/common/peercast.h	2006-03-21 16:00:25.000000000 +0200
++++ peercast-0.1217/core/common/peercast.h	2006-03-21 16:00:08.000000000 +0200
+@@ -64,7 +64,7 @@
+ {
+ public:
+ 
+-	virtual const char * APICALL getPath() {return "./";}
++	virtual const char * APICALL getPath() {return "/usr/share/peercast/";}
+ 	virtual const char * APICALL getIniFilename() {return "peercast.ini";}
+ 	virtual void	APICALL printLog(LogBuffer::TYPE, const char *) {}
+ 	virtual void	APICALL addChannel(ChanInfo *) {}
