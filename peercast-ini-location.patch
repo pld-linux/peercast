@@ -1,15 +1,18 @@
---- peercast-0.1212/ui/linux/main.cpp.orig	2005-06-15 13:46:02.000000000 +0200
-+++ peercast-0.1212/ui/linux/main.cpp	2005-06-15 13:48:02.000000000 +0200
-@@ -97,8 +97,10 @@
- // ----------------------------------
+--- peercast-0.1217/ui/linux/main.cpp~	2006-03-21 15:56:13.000000000 +0200
++++ peercast-0.1217/ui/linux/main.cpp	2006-03-21 15:57:57.000000000 +0200
+@@ -137,7 +137,14 @@
  int main(int argc, char* argv[])
  {
--			
+ 			
 -	iniFileName.set("peercast.ini");
 +	const char *home = getenv("HOME");
-+	if (home == NULL) home = "";
-+	iniFileName.set(home);
-+	iniFileName.append("/.peercast.ini");
- 
- 	if (argc > 2)
- 		if (strcmp(argv[1],"-inifile")==0)
++	if (home == NULL) {
++		iniFileName.set("peercast.ini");
++	} else {
++		iniFileName.set(home);
++		iniFileName.append("/.peercast.ini");
++	}
++
+ 	htmlPath.set("./");
+ 	pidFileName.set("peercast.pid");
+ 	logFileName.set("peercast.log");
