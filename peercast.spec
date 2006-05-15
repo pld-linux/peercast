@@ -44,6 +44,7 @@ find '(' -name '*.cpp' -o -name '*.h' ')' -print0 | xargs -0 sed -i -e 's,\r$,,'
 
 %build
 %{__make} -C ui/linux \
+	CC="%{__cc}" \
 	CPPFLAGS="%{rpmcxxflags} -D_UNIX" \
 	LDFLAGS="%{rpmldflags} -lpthread"
 
