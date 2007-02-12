@@ -1,5 +1,5 @@
 Summary:	PeerCast: a peer-to-peer streaming client/server
-Summary(pl):	PeerCast: klient/serwer strumieni w systemie peer-to-peer
+Summary(pl.UTF-8):   PeerCast: klient/serwer strumieni w systemie peer-to-peer
 Name:		peercast
 Version:	0.1217
 Release:	1
@@ -25,11 +25,11 @@ broadcaster without the costs of traditional streaming. This means you
 get to hear and watch stations not normally found on commercially
 funded sites.
 
-%description -l pl
-PeerCast to prosty darmowy sposób na s³uchanie radia i ogl±danie
-przekazu wideo w Internecie. U¿ywa on technologii P2P dla umo¿liwienia
-ka¿demu nadawania programu bez kosztów tradycyjnego serwera strumieni.
-Oznacza to mo¿liwo¶æ s³uchania i ogl±dania stacji zwykle niedostêpnych
+%description -l pl.UTF-8
+PeerCast to prosty darmowy sposÃ³b na sÅ‚uchanie radia i oglÄ…danie
+przekazu wideo w Internecie. UÅ¼ywa on technologii P2P dla umoÅ¼liwienia
+kaÅ¼demu nadawania programu bez kosztÃ³w tradycyjnego serwera strumieni.
+Oznacza to moÅ¼liwoÅ›Ä‡ sÅ‚uchania i oglÄ…dania stacji zwykle niedostÄ™pnych
 na stronach komercyjnych.
 
 %prep
