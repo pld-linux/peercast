@@ -2,7 +2,7 @@ Summary:	PeerCast: a peer-to-peer streaming client/server
 Summary(pl.UTF-8):	PeerCast: klient/serwer strumieni w systemie peer-to-peer
 Name:		peercast
 Version:	0.1217
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Multimedia
 Source0:	http://www.peercast.org/src/%{name}-%{version}-src.tgz
