@@ -1,0 +1,11 @@
+--- peercast-0.1217/core/common/sys.cpp~	2014-01-28 01:13:04.000000000 +0100
++++ peercast-0.1217/core/common/sys.cpp	2014-01-28 01:14:48.850115210 +0100
+@@ -745,7 +745,7 @@
+ 	if (!str)
+ 		return NULL;
+ 
+-	char *s = strstr(str,arg);
++	char *s = strstr((char *)str,arg);
+ 
+ 	if (!s)
+ 		return NULL;

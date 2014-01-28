@@ -2,7 +2,7 @@ Summary:	PeerCast: a peer-to-peer streaming client/server
 Summary(pl.UTF-8):	PeerCast: klient/serwer strumieni w systemie peer-to-peer
 Name:		peercast
 Version:	0.1217
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Multimedia
 Source0:	http://www.peercast.org/src/%{name}-%{version}-src.tgz
@@ -12,6 +12,7 @@ Patch1:		%{name}-ini-location.patch
 Patch2:		%{name}-amd64.patch
 Patch3:		%{name}-makefile.patch
 Patch4:		%{name}-paths.patch
+Patch5:		typeconv.patch
 URL:		http://www.peercast.org/
 BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -41,12 +42,14 @@ find '(' -name '*.cpp' -o -name '*.h' ')' -print0 | xargs -0 sed -i -e 's,\r$,,'
 %patch2 -p1
 %patch3 -p1
 %patch4 -p1
+%patch5 -p1
 
 %build
 %{__make} -C ui/linux \
 	CC="%{__cc}" \
 	CPPFLAGS="%{rpmcxxflags} -D_UNIX" \
-	LDFLAGS="%{rpmldflags} -lpthread"
+	LDFLAGS="%{rpmldflags}" \
+	LIBS="-lpthread"
 
 %install
 rm -rf $RPM_BUILD_ROOT
